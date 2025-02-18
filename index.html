@@ -2,12 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>To Do App</title>
+    <script type="module" src="/src/main.js" defer></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="app">
+      <nav class="navigation">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <section class="links">
+          <section class="link">
+            <img src="./src/assets/icons/home.png" alt="Home" />
+            <span>Home</span>
+          </section>
+          <section class="link">
+            <img src="./src/assets/icons/target.png" alt="Home" />
+            <span>Project</span>
+          </section>
+          <section class="link">
+            <img src="./src/assets/icons/task.png" alt="Home" />
+            <span>Tasks</span>
+          </section>
+          <section class="link">
+            <img src="./src/assets/icons/dashboard.png" alt="Home" />
+            <span>Dashboard</span>
+          </section>
+        </section>
+      </nav>
+      <main class="containor">
+        <section class="toolbar">
+          <form action="#" method="get">
+            <input type="search" name="search" id="search" />
+            <button><img src="./src/assets/icons/search.png" alt="" /></button>
+          </form>
+          <button class="theme">Dark Mode/ Light Mode</button>
+        </section>
+        <section class="page" id="home">
+          <section class="minidashboard"></section>
+          <section class="links">
+            <a href="#" class="link">Projects</a>
+            <a href="#" class="link">Task</a>
+          </section>
+          <section class="priority">
+            <h2>Priority</h2>
+            <section class="tasks">
+              <section class="task"></section>
+              <section class="task"></section>
+              <section class="task"></section>
+              <section class="task"></section>
+              <section class="task"></section>
+              <section class="task"></section>
+            </section>
+          </section>
+        </section>
+        <section class="page" id="dashboard">
+          <section class="stats"></section>
+          <section class="containor">
+            <h2>Projects</h2>
+            <section class="projects">
+              <a href="#" class="project"></a>
+              <a href="#" class="project"></a>
+              <a href="#" class="project"></a>
+              <a href="#" class="project"></a>
+              <a href="#" class="project"></a>
+            </section>
+          </section>
+        </section>
+        <section class="page" id="task">
+          
+        </section>
+        <section class="page" id="project"></section>
+      </main>
+    </div>
   </body>
 </html>
