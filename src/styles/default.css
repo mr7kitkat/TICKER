@@ -74,6 +74,10 @@ h6 {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   width: 100%;

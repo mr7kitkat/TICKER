@@ -41,7 +41,6 @@
 
   #home {
     @extend .col-flex;
-    display: none;
     .minidashboard {
       height: 200px;
       width: 100%;
@@ -77,7 +76,6 @@
 
   #dashboard {
     @extend .col-flex;
-    display: none;
     .stats {
       width: 100%;
       height: 200px;
@@ -99,5 +97,58 @@
     }
   }
 
-  
+  #task {
+    @extend .col-flex;
+    .dates {
+      @extend .col-flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .date {
+        display: inline-block;
+        background-color: lightgreen;
+        font-size: 1rem;
+        width: 100px;
+        text-align: center;
+        border-radius: 1rem;
+        padding: 0.3rem 0;
+        color: rgba(0, 0, 0, 0.463);
+
+        &.current {
+          width: 220px;
+          font-weight: bold;
+          color: black;
+        }
+      }
+    }
+
+    .tasks {
+      @extend .col-flex;
+      .task {
+        display: flex;
+        height: 40px;
+        width: 100%;
+        background-color: lightcyan;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+
+  #project {
+    @extend .col-flex;
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .projects {
+      @extend .col-flex;
+
+      .pitem {
+        display: flex;
+        height: 100px;
+        width: 100%;
+        background-color: burlywood;
+      }
+    }
+  }
 }
