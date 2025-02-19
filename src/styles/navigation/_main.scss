@@ -40,7 +40,7 @@
   }
 
   #home {
-    @extend .col-flex;
+    display: none;
     .minidashboard {
       height: 200px;
       width: 100%;
@@ -75,7 +75,7 @@
   }
 
   #dashboard {
-    @extend .col-flex;
+    display: none;
     .stats {
       width: 100%;
       height: 200px;
@@ -98,7 +98,7 @@
   }
 
   #task {
-    @extend .col-flex;
+    display: none;
     .dates {
       @extend .col-flex;
       flex-direction: row;
@@ -135,7 +135,7 @@
   }
 
   #project {
-    @extend .col-flex;
+    display: none;
     h1 {
       font-size: 2.5rem;
     }
@@ -150,5 +150,10 @@
         background-color: burlywood;
       }
     }
+  }
+
+  .page.active {
+    @extend .col-flex;
+    display: flex !important;
   }
 }

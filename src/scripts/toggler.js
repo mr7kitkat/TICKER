@@ -1,21 +1,29 @@
 export default class {
-    constructor(item = [], defaultClass = "") {
-        this.list = item;
-        this.current = null
-        this.defaultClass = defaultClass;
+    constructor(list, defaultClass) {
+        this.list = list
+        this.defaultClass = defaultClass
+        this.evenTrigger();
+        this.addClass(this.list[0].hash)
     }
 
-    updateClass(clsname) {
-        this.defaultClass = clsname;
+    removeClass() {
+        this.list.forEach(element => {
+            const target = document.querySelector(element.hash);
+            target.classList.remove(this.defaultClass);
+        });
     }
 
-    detachClassNames(clsname = this.defaultClass) {
-        this.list.forEach(item => {
-            item.className.remove(clsname);
+    addClass(hash) {
+        const target = document.querySelector(hash);
+        target.classList.add(this.defaultClass);
+    }
+
+    evenTrigger() {
+        this.list.forEach(elem => {
+            elem.addEventListener("click", () => {
+                this.removeClass()
+                this.addClass(elem.hash)
+            })
         })
-    }
-
-    attachClassName(clsname = this.defaultClass) {
-        this.current.className.add(clsname)
     }
 }
