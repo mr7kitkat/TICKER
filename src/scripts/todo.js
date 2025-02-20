@@ -9,6 +9,7 @@ export default class {
         return this.tasks.length;
     }
 
+
     // add a single task to all tasks
     add(title, description = null, subtask = null, due_date = null, due_time = null, status = false, pLevel = 0) {
         const idx = this.getTotalTasks();
@@ -51,6 +52,6 @@ export default class {
     }
 
     render() {
-        console.log(this.tasks)
+
     }
 }
