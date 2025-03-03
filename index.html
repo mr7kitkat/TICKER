@@ -2,12 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do App</title>
+    <title>To Do Application</title>
+    <script type="module" src="./src/scripts/todo.js" defer></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="containor">
+      <!-- header -->
+      <div class="header">
+        <p class="title date">3rd March</p>
+
+        <!-- item to make a toggle button for day and night mode -->
+        <label for="daynight">
+          <input type="checkbox" name="daynight" id="daynight" />
+          <span class="circle"></span>
+        </label>
+      </div>
+
+      <!-- body containor -->
+      <div class="main">
+        <div class="menu"></div>
+        <div class="task-containor">
+          <div class="search-bar">
+            <input type="search" name="search" id="search" />
+            <button>
+              <img src="./src/assets/icons/lens.png" alt="lens" />
+            </button>
+          </div>
+          <div class="tasks">
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+          </div>
+          <div class="quick-add">
+            <input type="text" name="task-input" id="task-input" />
+            <button>&plus;</button>
+            <button>&uarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
